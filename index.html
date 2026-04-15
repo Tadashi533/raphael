@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Raphael Mgawi — Software Developer and IT Officer portfolio." />
+    <title>Raphael Mgawi | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0b1f20',
+                        deep: '#2c3531',
+                        teal: '#116466',
+                        sand: '#d9b08c',
+                        peach: '#ffcb9a',
+                        mist: '#d1e8e2',
+                        glow: '#6ee7df'
+                    },
+                    boxShadow: {
+                        soft: '0 20px 60px rgba(0,0,0,0.35)',
+                        glow: '0 0 40px rgba(17, 100, 102, 0.35)'
+                    },
+                    keyframes: {
+                        orb: {
+                            '0%, 100%': { transform: 'translate3d(0,0,0) scale(1)' },
+                            '50%': { transform: 'translate3d(0,-14px,0) scale(1.04)' }
+                        },
+                        drift: {
+                            '0%, 100%': { transform: 'translateX(0px)' },
+                            '50%': { transform: 'translateX(18px)' }
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(26px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        blink: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '.35', transform: 'scale(.82)' }
+                        }
+                    },
+                    animation: {
+                        orb: 'orb 8s ease-in-out infinite',
+                        drift: 'drift 10s ease-in-out infinite',
+                        fadeUp: 'fadeUp .8s ease-out both',
+                        blink: 'blink 1.2s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(17, 100, 102, 0.22), transparent 28%),
+                radial-gradient(circle at 80% 10%, rgba(255, 203, 154, 0.10), transparent 22%),
+                linear-gradient(180deg, #071415 0%, #0b1f20 55%, #061112 100%);
+        }
+
+        .glass {
+            background: rgba(8, 22, 23, 0.62);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(209, 232, 226, 0.08);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .orb-ring {
+            background:
+                radial-gradient(circle at 35% 30%, rgba(255, 203, 154, .38), transparent 14%),
+                radial-gradient(circle at 60% 55%, rgba(17, 100, 102, .55), transparent 18%),
+                radial-gradient(circle at center, rgba(209, 232, 226, .16), transparent 56%),
+                radial-gradient(circle at center, rgba(255, 255, 255, .04), transparent 67%);
+            box-shadow: inset 0 0 80px rgba(0, 0, 0, .35), 0 0 70px rgba(17, 100, 102, .22);
+        }
+
+        .orb-core {
+            background:
+                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .22), transparent 16%),
+                radial-gradient(circle at 55% 45%, rgba(255, 203, 154, .18), transparent 22%),
+                linear-gradient(145deg, rgba(44, 53, 49, .95), rgba(6, 17, 18, .95));
+            border: 1px solid rgba(209, 232, 226, 0.12);
+            box-shadow: inset 0 0 40px rgba(0, 0, 0, .45), 0 30px 70px rgba(0, 0, 0, .4);
+        }
+
+        .orb-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(209, 232, 226, .92), transparent);
+            box-shadow: 0 0 18px rgba(209, 232, 226, .45);
+            transform-origin: center;
+        }
+
+        .mesh {
+            background-image:
+                linear-gradient(rgba(209, 232, 226, .08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(209, 232, 226, .08) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: radial-gradient(circle at center, black 0 55%, transparent 72%);
+            opacity: .28;
+        }
+    </style>
+</head>
+
+<body class="text-mist antialiased selection:bg-teal/40 selection:text-white">
+    <div class="fixed inset-0 -z-20 mesh"></div>
+    <div class="fixed -top-24 -left-20 -z-10 h-80 w-80 rounded-full bg-teal/20 blur-3xl animate-orb"></div>
+    <div class="fixed top-1/3 -right-28 -z-10 h-96 w-96 rounded-full bg-sand/10 blur-3xl animate-orb"
+        style="animation-delay:-2s"></div>
+    <div class="fixed bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-mist/10 blur-3xl animate-orb"
+        style="animation-delay:-4s"></div>
+
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-[#081617]/80 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="#home" class="group flex items-center gap-3">
+                <div
+                    class="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-glow">
+                    <i data-lucide="orbit" class="h-5 w-5 text-teal"></i>
+                </div>
+                <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.35em] text-sand/70">Portfolio</p>
+                    <h1 class="text-base font-semibold text-white group-hover:text-sand transition">Raphael Mgawi</h1>
+                </div>
+            </a>
+
+            <nav class="hidden items-center gap-8 md:flex text-sm text-slate-300">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#education" class="hover:text-white transition">Education</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <button id="menu-toggle"
+                class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-2 text-slate-200 md:hidden">
+                <i data-lucide="menu" class="h-5 w-5"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-white/5 px-4 pb-4 md:hidden">
+            <div class="grid gap-2 pt-3 text-sm text-slate-300">
+                <a href="#about" class="rounded-xl px-3 py-2 hover:bg-white/5">About</a>
+                <a href="#skills" class="rounded-xl px-3 py-2 hover:bg-white/5">Skills</a>
+                <a href="#experience" class="rounded-xl px-3 py-2 hover:bg-white/5">Experience</a>
+                <a href="#projects" class="rounded-xl px-3 py-2 hover:bg-white/5">Projects</a>
+                <a href="#education" class="rounded-xl px-3 py-2 hover:bg-white/5">Education</a>
+                <a href="#contact" class="rounded-xl px-3 py-2 hover:bg-white/5">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section class="grid min-h-[92vh] items-center gap-12 py-10 lg:grid-cols-[1.05fr_.95fr] lg:py-16">
+            <div class="reveal">
+                <p class="text-sm font-semibold uppercase tracking-[0.45em] text-sand/80">Welcome</p>
+                <h2 class="mt-4 max-w-3xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+                    <span class="block text-teal">Raphael</span>
+                    <span class="block text-white">Mgawi</span>
+                </h2>
+                <br>
+                <div
+                    class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                    <span class="h-2.5 w-2.5 rounded-full bg-teal shadow-[0_0_20px_rgba(17,100,102,.9)]"></span>
+                    Software Developer • IT Officer • Infrastructure Support
+                </div>
+
+                <div
+                    class="mt-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                    <span
+                        class="h-2.5 w-2.5 rounded-full bg-green-500 shadow-[0_0_18px_rgba(34,197,94,.9)] animate-blink"></span>
+                    Open for work
+                </div>
+
+                <p class="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+                    I design and deliver software systems, maintain reliable IT environments, and build practical
+                    digital solutions with a polished, business-ready approach.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="inline-flex items-center gap-2 rounded-2xl border border-teal/30 bg-teal/10 px-6 py-3 font-semibold text-teal-100 shadow-glow transition hover:-translate-y-0.5 hover:bg-teal/20">
+                        <i data-lucide="sparkles" class="h-4 w-4"></i>
+                        Explore Work
+                    </a>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                        <i data-lucide="send" class="h-4 w-4"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="reveal relative flex justify-center lg:justify-end">
+                <div class="mt-10 grid gap-4 sm:grid-cols-3 ">
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 shadow-soft transition hover:-translate-y-1 hover:bg-white/8">
+                        <div class="flex items-center gap-3 text-sand">
+                            <i data-lucide="layers-3" class="h-5 w-5"></i>
+                            <span class="text-sm font-medium">Stack</span>
+                        </div>
+                        <p class="mt-3 text-2xl font-bold text-white">Full-Stack</p>
+                        <p class="mt-1 text-sm text-slate-400">Frontend and backend delivery</p>
+                    </div>
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 shadow-soft transition hover:-translate-y-1 hover:bg-white/8">
+                        <div class="flex items-center gap-3 text-sand">
+                            <i data-lucide="shield-check" class="h-5 w-5"></i>
+                            <span class="text-sm font-medium">Focus</span>
+                        </div>
+                        <p class="mt-3 text-2xl font-bold text-white">Secure</p>
+                        <p class="mt-1 text-sm text-slate-400">Stable systems and secure operations</p>
+                    </div>
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 shadow-soft transition hover:-translate-y-1 hover:bg-white/8">
+                        <div class="flex items-center gap-3 text-sand">
+                            <i data-lucide="route" class="h-5 w-5"></i>
+                            <span class="text-sm font-medium">Delivery</span>
+                        </div>
+                        <p class="mt-3 text-2xl font-bold text-white">Reliable</p>
+                        <p class="mt-1 text-sm text-slate-400">Practical, results-focused execution</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="reveal py-20 lg:py-24">
+            <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">About me</p>
+                    <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">A balanced mix of Software Development
+                        and IT
+                        operations</h3>
+                    <p class="mt-5 max-w-2xl leading-8 text-slate-300">
+                        I work across application development, infrastructure support, and systems maintenance. My
+                        background includes building web applications, supporting networks, and keeping business systems
+                        available and dependable.
+                    </p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="code-xml" class="h-6 w-6 text-teal"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Web Development</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Responsive interfaces, clean code structure,
+                            and practical delivery.</p>
+                    </div>
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="server" class="h-6 w-6 text-sand"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Infrastructure</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Networks, servers, firewalls, cabling, and
+                            hardware support.</p>
+                    </div>
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="users" class="h-6 w-6 text-mist"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Teamwork</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Strong communication, active listening, and
+                            collaboration.</p>
+                    </div>
+                    <div
+                        class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="zap" class="h-6 w-6 text-peach"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Quick Learning</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Fast adaptation to new tools, workflows, and
+                            environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="reveal py-20 lg:py-24">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Skills</p>
+                    <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Technical strengths</h3>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                <div class="rounded-[1.9rem] border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="layout-panel-top" class="h-5 w-5 text-teal"></i>
+                        <h4 class="text-xl font-semibold text-white">Frontend Development</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">HTML</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">CSS, Tailwind, Bootstrap</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">JavaScript, React JS</div>
+                    </div>
+                </div>
+
+                <div class="rounded-[1.9rem] border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="braces" class="h-5 w-5 text-mist"></i>
+                        <h4 class="text-xl font-semibold text-white">Backend Development</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">PHP, Laravel</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Node JS</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">APIs and server logic</div>
+                    </div>
+                </div>
+
+                <div class="rounded-[1.9rem] border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="database" class="h-5 w-5 text-sand"></i>
+                        <h4 class="text-xl font-semibold text-white">Databases & Tools</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">SQL, MySQL, Postgres</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">phpMyAdmin, pgAdmin</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Backup, recovery, encryption</div>
+                    </div>
+                </div>
+
+                <div class="rounded-[1.9rem] border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="network" class="h-5 w-5 text-peach"></i>
+                        <h4 class="text-xl font-semibold text-white">Network & Security</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">TCP/IP, DNS, routing, subnetting</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Firewall, IDS, endpoint security</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Cabling and device configuration</div>
+                    </div>
+                </div>
+
+                <div class="rounded-[1.9rem] border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="cloud" class="h-5 w-5 text-glow"></i>
+                        <h4 class="text-xl font-semibold text-white">Cloud & DevOps</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Amazon Web Services</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Microsoft Azure</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Monitoring and maintenance</div>
+                    </div>
+                </div>
+
+                <div class="rounded-[1.9rem] border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="notebook-pen" class="h-5 w-5 text-cyan-200"></i>
+                        <h4 class="text-xl font-semibold text-white">Productivity & Data</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Microsoft Office Suite</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">DHIS2, Kobo Toolbox</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Google Sheets, Google Analytics</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="reveal py-20 lg:py-24">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Experience</p>
+                    <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Professional journey</h3>
+                </div>
+
+            </div>
+
+            <div class="mt-10 grid gap-6">
+                <article
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-teal/10 text-teal shadow-glow">
+                                <i data-lucide="monitor-smartphone" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Software Developer — Electro</h4>
+                                <p class="mt-1 text-sm text-slate-400">Blantyre • February 2025 – November 2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs font-medium text-teal-100">Full-stack
+                            delivery</span>
+                    </div>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i><span>Built and
+                                maintained a web application using HTML, Tailwind CSS, JavaScript, PHP, and SQL.</span>
+                        </li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-teal"></i><span>Integrated the PayChangu payment API to support
+                                secure transactions.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i><span>Worked
+                                with the client to deliver a solution aligned with business needs.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-sand/10 text-sand shadow-glow">
+                                <i data-lucide="network" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">System Infrastructure Officer — MUBAS</h4>
+                                <p class="mt-1 text-sm text-slate-400">Blantyre • April 2025 – June 2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-sand/20 bg-sand/10 px-3 py-1 text-xs font-medium text-sand">Infrastructure</span>
+                    </div>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-sand"></i><span>Supported
+                                IT infrastructure including network systems, servers, and hardware.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-sand"></i><span>Installed
+                                firewalls, routers, switches, and cabling for secure connectivity.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-sand"></i><span>Maintained Wi-Fi APs, laptops, desktops, and
+                                CCTV systems.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-mist/10 text-mist shadow-glow">
+                                <i data-lucide="wrench" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">ICT Technician — TEE Components and
+                                    Communications</h4>
+                                <p class="mt-1 text-sm text-slate-400">Lilongwe • May 2024 – August 2024</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-mist/20 bg-mist/10 px-3 py-1 text-xs font-medium text-mist">Support</span>
+                    </div>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-mist"></i><span>Provided
+                                technical support and preventive maintenance for money counting machines, computers, and
+                                printers.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-mist"></i><span>Supported
+                                First Capital Bank, NBS Bank, and the Reserve Bank of Malawi.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-amber-400/10 text-peach shadow-glow">
+                                <i data-lucide="code-2" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Software Developer — House Nest</h4>
+                                <p class="mt-1 text-sm text-slate-400">Blantyre • April 2024 – June 2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-peach/20 bg-peach/10 px-3 py-1 text-xs font-medium text-peach">API
+                            integration</span>
+                    </div>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-peach"></i><span>Designed
+                                and developed a web application using HTML, CSS, JavaScript, Bootstrap, PHP, and
+                                SQL.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-peach"></i><span>Integrated SMS and payment APIs for
+                                communication and transaction processing.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-purple-500/10 text-purple-200 shadow-glow">
+                                <i data-lucide="car-front" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Software Developer — No Deposit Car Rental
+                                </h4>
+                                <p class="mt-1 text-sm text-slate-400">Dubai (remote) • May 2023 – April 2024</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-purple-400/20 bg-purple-400/10 px-3 py-1 text-xs font-medium text-purple-200">Performance</span>
+                    </div>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-purple-200"></i><span>Built and maintained a responsive,
+                                high-performance web application.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-purple-200"></i><span>Applied SEO best practices to improve
+                                visibility and user retention.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-pink-500/10 text-pink-200 shadow-glow">
+                                <i data-lucide="badge-check" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Election Management Device (EMD) Operator —
+                                    MEC</h4>
+                                <p class="mt-1 text-sm text-slate-400">Various Loocations • October 2024 – September
+                                    2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-pink-400/20 bg-pink-400/10 px-3 py-1 text-xs font-medium text-pink-200">Operations</span>
+                    </div>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-pink-200"></i><span>Registered, transferred, and verified
+                                voters using the Election Management Device.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-pink-200"></i><span>Updated voter records and supported
+                                identity confirmation through fingerprint verification.</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal py-20 lg:py-24">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Highlights</p>
+                    <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Featured work</h3>
+                </div>
+
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                <div
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex items-center justify-between">
+                        <i data-lucide="credit-card" class="h-8 w-8 text-teal"></i>
+                        <span
+                            class="rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs text-teal-100">Payment
+                            API</span>
+                    </div>
+                    <h4 class="mt-6 text-2xl font-semibold text-white">Electro Web Application</h4>
+                    <p class="mt-3 text-sm leading-7 text-slate-400">Secure transaction-focused business application
+                        with modern UI and backend logic.</p>
+                    <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    <p class="mt-4 text-sm text-slate-300">Tailwind CSS • PHP • SQL • PayChangu</p>
+                </div>
+
+                <div
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex items-center justify-between">
+                        <i data-lucide="home" class="h-8 w-8 text-sand"></i>
+                        <span
+                            class="rounded-full border border-sand/20 bg-sand/10 px-3 py-1 text-xs text-sand/100">Property
+                            tech</span>
+                    </div>
+                    <h4 class="mt-6 text-2xl font-semibold text-white">House Nest Platform</h4>
+                    <p class="mt-3 text-sm leading-7 text-slate-400">Property-focused web solution with communication
+                        and payment integrations.</p>
+                    <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    <p class="mt-4 text-sm text-slate-300">HTML • Bootstrap • JavaScript • PHP • SQL</p>
+                </div>
+
+                <div
+                    class="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex items-center justify-between">
+                        <i data-lucide="search-check" class="h-8 w-8 text-peach"></i>
+                        <span
+                            class="rounded-full border border-peach/20 bg-peach/10 px-3 py-1 text-xs text-peach/100">SEO
+                            + speed</span>
+                    </div>
+                    <h4 class="mt-6 text-2xl font-semibold text-white">No Deposit Car Rental</h4>
+                    <p class="mt-3 text-sm leading-7 text-slate-400">Responsive rental platform designed to improve
+                        visibility and user experience.</p>
+                    <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    <p class="mt-4 text-sm text-slate-300">UX • Performance • SEO • Responsive design</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="reveal py-20 lg:py-24">
+            <div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Education</p>
+                    <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Academic background</h3>
+                </div>
+                <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8">
+                    <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">Bachelor of Science in Information and
+                                Community Technology</h4>
+                            <p class="mt-2 text-slate-400">Mzuzu University, Mzuzu</p>
+                        </div>
+                        <span
+                            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">Oct
+                            2019 – Jan 2024</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">A strong foundation in computing, systems,
+                        networking, and practical information technology applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal py-20 lg:py-24">
+            <div
+                class="overflow-hidden rounded-[2.25rem] border border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(17,100,102,.35),transparent_35%),linear-gradient(135deg,rgba(44,53,49,.95),rgba(6,17,18,.98))] p-8 md:p-12 shadow-2xl">
+                <div class="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-center">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Contact</p>
+                        <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Let’s build something useful</h3>
+                        <p class="mt-5 max-w-2xl leading-8 text-slate-300">Reach out for software development, IT
+                            support, infrastructure maintenance, or web project collaboration.</p>
+                        <div class="mt-8 flex flex-wrap gap-4">
+                            <a href="mailto:mgawiralph@gmail.com"
+                                class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                                <i data-lucide="mail" class="h-4 w-4"></i>
+                                Email Me
+                            </a>
+                            <a href="tel:+265997232061"
+                                class="inline-flex items-center gap-2 rounded-2xl border border-teal/25 bg-teal/10 px-6 py-3 font-semibold text-teal-100 transition hover:-translate-y-0.5 hover:bg-teal/20">
+                                <i data-lucide="phone" class="h-4 w-4"></i>
+                                Call Me
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
+                            <p class="text-sm text-slate-400">Email</p>
+                            <p class="mt-2 text-lg font-semibold text-white">mgawiralph@gmail.com</p>
+                        </div>
+                        <div class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
+                            <p class="text-sm text-slate-400">Phone</p>
+                            <p class="mt-2 text-lg font-semibold text-white">+265 997 232 061</p>
+                            <p class="text-sm font-medium text-slate-300">+265 880 474 533</p>
+                        </div>
+                        <div class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
+                            <p class="text-sm text-slate-400">LinkedIn</p>
+                            <p class="mt-2 text-lg font-semibold text-white">www.linkedin.com/in/ralph-mgawi-5ba1612aa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8 text-center text-sm text-slate-500">
+        © 2026 Raphael Mgawi. Built with HTML, Tailwind CSS, and JavaScript.
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const revealItems = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        }, { threshold: 0.15 });
+        revealItems.forEach(item => observer.observe(item));
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

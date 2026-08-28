@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Raphael Mgawi is a Malawi-based Software Developer and IT Officer specializing in full-stack web and mobile development, React, React Native, Next.js, PHP, Laravel, CodeIgniter, Node.js, REST APIs, databases, cloud, and IT infrastructure." />
+    <meta name="keywords"
+        content="Raphael Mgawi, Raphael Mgawi software developer, Ralph Mgawi, Malawi software developer, software developer Malawi, IT officer Malawi, full stack developer Malawi, React developer Malawi, React Native developer Malawi, Next.js developer Malawi, PHP developer Malawi, Laravel developer Malawi, CodeIgniter developer Malawi, Node.js developer Malawi, web developer Malawi, mobile app developer Malawi, REST API developer, MySQL, PostgreSQL, AWS, Azure, IT infrastructure" />
+    <meta name="author" content="Raphael Mgawi" />
+    <meta name="creator" content="Raphael Mgawi" />
+    <meta name="application-name" content="Raphael Mgawi Portfolio" />
+    <meta name="language" content="English" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#0b1f20" />
+
+    <meta property="og:title" content="Raphael Mgawi | Software Developer & IT Officer in Malawi" />
+    <meta property="og:description"
+        content="Portfolio of Raphael Mgawi, a Malawi-based full-stack software developer and IT officer working across web, mobile, APIs, databases, cloud, networking, and IT infrastructure." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_MW" />
+    <meta property="og:site_name" content="Raphael Mgawi Portfolio" />
+    <meta property="profile:first_name" content="Raphael" />
+    <meta property="profile:last_name" content="Mgawi" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Raphael Mgawi | Software Developer & IT Officer" />
+    <meta name="twitter:description"
+        content="Malawi-based software developer and IT officer specializing in full-stack web/mobile development, APIs, databases, cloud, networking, and infrastructure." />
+
+    <meta name="geo.region" content="MW" />
+    <meta name="geo.placename" content="Malawi" />
+<title>Raphael Mgawi | Software Developer & IT Officer in Malawi</title>
+    <!-- SEO deployment note:
+         Once the final domain is known, add a self-referencing rel="canonical",
+         og:url, og:image and twitter:image using absolute HTTPS URLs. -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0b1f20',
+                        deep: '#2c3531',
+                        teal: '#116466',
+                        sand: '#d9b08c',
+                        peach: '#ffcb9a',
+                        mist: '#d1e8e2',
+                        glow: '#6ee7df'
+                    },
+                    keyframes: {
+                        orb: {
+                            '0%, 100%': { transform: 'translate3d(0,0,0) scale(1)' },
+                            '50%': { transform: 'translate3d(0,-14px,0) scale(1.04)' }
+                        },
+                        drift: {
+                            '0%, 100%': { transform: 'translateX(0px)' },
+                            '50%': { transform: 'translateX(18px)' }
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(26px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        blink: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '.35', transform: 'scale(.82)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    },
+                    animation: {
+                        orb: 'orb 8s ease-in-out infinite',
+                        drift: 'drift 10s ease-in-out infinite',
+                        fadeUp: 'fadeUp .8s ease-out both',
+                        blink: 'blink 1.2s ease-in-out infinite',
+                        shimmer: 'shimmer 3s linear infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(17, 100, 102, 0.22), transparent 28%),
+                radial-gradient(circle at 80% 10%, rgba(255, 203, 154, 0.10), transparent 22%),
+                linear-gradient(180deg, #071415 0%, #0b1f20 55%, #061112 100%);
+        }
+
+        .glass {
+            background: rgba(8, 22, 23, 0.62);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(209, 232, 226, 0.08);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .orb-ring {
+            background:
+                radial-gradient(circle at 35% 30%, rgba(255, 203, 154, .38), transparent 14%),
+                radial-gradient(circle at 60% 55%, rgba(17, 100, 102, .55), transparent 18%),
+                radial-gradient(circle at center, rgba(209, 232, 226, .16), transparent 56%),
+                radial-gradient(circle at center, rgba(255, 255, 255, .04), transparent 67%);
+        }
+
+        .orb-core {
+            background:
+                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .22), transparent 16%),
+                radial-gradient(circle at 55% 45%, rgba(255, 203, 154, .18), transparent 22%),
+                linear-gradient(145deg, rgba(44, 53, 49, .95), rgba(6, 17, 18, .95));
+            border: 1px solid rgba(209, 232, 226, 0.12);
+        }
+
+        .orb-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(209, 232, 226, .92), transparent);
+            transform-origin: center;
+        }
+
+        .mesh {
+            background-image:
+                linear-gradient(rgba(209, 232, 226, .08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(209, 232, 226, .08) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: radial-gradient(circle at center, black 0 55%, transparent 72%);
+            opacity: .28;
+        }
+
+        .section-label {
+            letter-spacing: .35em;
+        }
+
+        .ticker {
+            background: linear-gradient(90deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .18), rgba(255, 255, 255, .08));
+            background-size: 200% 100%;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "#raphael-mgawi",
+          "name": "Raphael Mgawi",
+          "givenName": "Raphael",
+          "familyName": "Mgawi",
+          "jobTitle": "Software Developer and IT Officer",
+          "description": "Malawi-based software developer and IT officer with hands-on experience creating, managing and maintaining software systems across web, mobile, APIs, databases, cloud and IT infrastructure.",
+          "email": "mailto:mgawiralph@gmail.com",
+          "telephone": "+265997232061",
+          "sameAs": [
+            "https://www.linkedin.com/in/ralph-mgawi-5ba1612aa"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MW"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "React Systems"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Mzuzu University",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mzuzu",
+              "addressCountry": "MW"
+            }
+          },
+          "knowsAbout": [
+            "Full-stack Software Development",
+            "Web Development",
+            "Mobile Application Development",
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+            "Bootstrap",
+            "JavaScript",
+            "React",
+            "React Native",
+            "Next.js",
+            "PHP",
+            "Laravel",
+            "CodeIgniter",
+            "Node.js",
+            "REST APIs",
+            "MySQL",
+            "PostgreSQL",
+            "Amazon Web Services",
+            "Microsoft Azure",
+            "Networking",
+            "IT Support",
+            "System Administration",
+            "Database Management",
+            "Search Engine Optimization"
+          ],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Developer",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "Malawi"
+            },
+            "skills": "React, React Native, Next.js, JavaScript, PHP, Laravel, CodeIgniter, Node.js, REST APIs, MySQL, PostgreSQL, Tailwind CSS, AWS, Azure"
+          }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "#profile-page",
+          "name": "Raphael Mgawi (Software Developer & IT Officer) Portfolio",
+          "description": "Professional portfolio, skills, experience, education and contact information for Raphael Mgawi.",
+          "mainEntity": {
+            "@id": "#raphael-mgawi"
+          },
+          "inLanguage": "en-MW",
+          "dateModified": "2026-08-28"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "#portfolio-website",
+          "name": "Raphael Mgawi Portfolio",
+          "inLanguage": "en-MW",
+          "about": {
+            "@id": "#raphael-mgawi"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="text-mist antialiased selection:bg-teal/40 selection:text-white">
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:text-ink">
+        Skip to main content
+    </a>
+    <div class="fixed inset-0 -z-20 mesh"></div>
+    <div class="fixed -top-24 -left-20 -z-10 h-80 w-80 rounded-full bg-teal/20 blur-3xl animate-orb"></div>
+    <div class="fixed top-1/3 -right-28 -z-10 h-96 w-96 rounded-full bg-sand/10 blur-3xl animate-orb"
+        style="animation-delay:-2s"></div>
+    <div class="fixed bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-mist/10 blur-3xl animate-orb"
+        style="animation-delay:-4s"></div>
+
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-[#081617]/80 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="#home" class="group flex items-center gap-3">
+                <div
+                    class="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 bg-white/5">
+                    <i data-lucide="orbit" class="h-5 w-5 text-teal"></i>
+                </div>
+                <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.35em] text-sand/70">Portfolio</p>
+                    <p class="text-base font-semibold text-white group-hover:text-sand transition">Raphael Mgawi</p>
+                </div>
+            </a>
+
+            <nav class="hidden items-center gap-8 md:flex text-sm text-slate-300">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#education" class="hover:text-white transition">Education</a>
+                <a href="#references" class="hover:text-white transition">References</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <button id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"
+                class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-2 text-slate-200 md:hidden">
+                <i data-lucide="menu" class="h-5 w-5"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-white/5 px-4 pb-4 md:hidden">
+            <div class="grid gap-2 pt-3 text-sm text-slate-300">
+                <a href="#about" class="rounded-xl px-3 py-2 hover:bg-white/5">About</a>
+                <a href="#skills" class="rounded-xl px-3 py-2 hover:bg-white/5">Skills</a>
+                <a href="#experience" class="rounded-xl px-3 py-2 hover:bg-white/5">Experience</a>
+                <a href="#projects" class="rounded-xl px-3 py-2 hover:bg-white/5">Projects</a>
+                <a href="#education" class="rounded-xl px-3 py-2 hover:bg-white/5">Education</a>
+                <a href="#references" class="rounded-xl px-3 py-2 hover:bg-white/5">References</a>
+                <a href="#contact" class="rounded-xl px-3 py-2 hover:bg-white/5">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="home" class="grid min-h-[92vh] items-center gap-12 py-10 lg:grid-cols-[1.05fr_.95fr] lg:py-16">
+            <div class="reveal">
+                <p class="text-sm font-semibold uppercase tracking-[0.45em] text-sand/80">Welcome</p>
+                <h1 class="mt-4 max-w-3xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+                    <span class="block text-teal">Raphael</span>
+                    <span class="block text-white">Mgawi</span>
+                </h1>
+                <br>
+                <div
+                    class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                    <span class="h-2.5 w-2.5 rounded-full bg-teal"></span>
+                    Software Developer • IT Officer • Web & Mobile Development
+                </div>
+
+                <div
+                    class="mt-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                    <span
+                        class="h-2.5 w-2.5 rounded-full bg-green-500 animate-blink"></span>
+                    Open for work
+                </div>
+
+                <p class="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+                    I design, develop, and maintain full-stack software for web and mobile, working across
+                    frontend, backend, APIs, databases, cloud services, and reliable IT environments.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="inline-flex items-center gap-2 rounded-2xl border border-teal/30 bg-teal/10 px-6 py-3 font-semibold text-teal-100 transition hover:-translate-y-0.5 hover:bg-teal/20">
+                        <i data-lucide="sparkles" class="h-4 w-4"></i>
+                        Explore Work
+                    </a>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                        <i data-lucide="send" class="h-4 w-4"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="reveal relative flex justify-center lg:justify-end">
+                <div class="mt-10 grid gap-4 sm:grid-cols-3 ">
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:bg-white/8">
+                        <div class="flex items-center gap-3 text-sand">
+                            <i data-lucide="layers-3" class="h-5 w-5"></i>
+                            <span class="text-sm font-medium">Stack</span>
+                        </div>
+                        <p class="mt-3 text-2xl font-bold text-white">Full-Stack</p>
+                        <p class="mt-1 text-sm text-slate-400">Frontend and backend delivery</p>
+                    </div>
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:bg-white/8">
+                        <div class="flex items-center gap-3 text-sand">
+                            <i data-lucide="shield-check" class="h-5 w-5"></i>
+                            <span class="text-sm font-medium">Focus</span>
+                        </div>
+                        <p class="mt-3 text-2xl font-bold text-white">Secure</p>
+                        <p class="mt-1 text-sm text-slate-400">Stable systems and secure operations</p>
+                    </div>
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:bg-white/8">
+                        <div class="flex items-center gap-3 text-sand">
+                            <i data-lucide="route" class="h-5 w-5"></i>
+                            <span class="text-sm font-medium">Delivery</span>
+                        </div>
+                        <p class="mt-3 text-2xl font-bold text-white">Reliable</p>
+                        <p class="mt-1 text-sm text-slate-400">Practical, results-focused execution</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading" class="reveal py-20 lg:py-24">
+            <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">About me</p>
+                    <h2 id="about-heading" class="mt-3 text-3xl font-bold text-white sm:text-4xl">A balanced mix of Software Development
+                        and IT
+                        operations</h2>
+                    <p class="mt-5 max-w-2xl leading-8 text-slate-300">
+                        I am a Malawi-based software developer and IT officer with hands-on experience creating,
+                        managing, and maintaining software systems. I have developed and delivered products for React
+                        Systems, House Nest, Electro, and No Deposit Car Rental, while also supporting infrastructure,
+                        networks, and day-to-day IT operations.
+                    </p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="code-xml" class="h-6 w-6 text-teal"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Web Development</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Responsive interfaces, clean code structure,
+                            and practical delivery.</p>
+                    </div>
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="server" class="h-6 w-6 text-sand"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Infrastructure</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Networks, servers, firewalls, cabling, and
+                            hardware support.</p>
+                    </div>
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="users" class="h-6 w-6 text-mist"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Teamwork</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Strong communication, active listening, and
+                            collaboration.</p>
+                    </div>
+                    <div
+                        class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                        <i data-lucide="zap" class="h-6 w-6 text-peach"></i>
+                        <h4 class="mt-4 text-xl font-semibold text-white">Quick Learning</h4>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Fast adaptation to new tools, workflows, and
+                            environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading" class="reveal py-20 lg:py-24">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Skills</p>
+                    <h2 id="skills-heading" class="mt-3 text-3xl font-bold text-white sm:text-4xl">Technical strengths</h2>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                <div class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="layout-panel-top" class="h-5 w-5 text-teal"></i>
+                        <h4 class="text-xl font-semibold text-white">Frontend Development</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">HTML</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">CSS, Tailwind, Bootstrap</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">JavaScript, React JS</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">React Native, Next.js</div>
+                    </div>
+                </div>
+
+                <div class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="braces" class="h-5 w-5 text-mist"></i>
+                        <h4 class="text-xl font-semibold text-white">Backend Development</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">PHP, Laravel, CodeIgniter</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Node.js, Next.js</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">REST APIs and server logic</div>
+                    </div>
+                </div>
+
+                <div class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="database" class="h-5 w-5 text-sand"></i>
+                        <h4 class="text-xl font-semibold text-white">Databases & Tools</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">SQL, MySQL, Postgres</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">phpMyAdmin, pgAdmin</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Backup, recovery, encryption</div>
+                    </div>
+                </div>
+
+                <div class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="network" class="h-5 w-5 text-peach"></i>
+                        <h4 class="text-xl font-semibold text-white">Network & Security</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">TCP/IP, DNS, routing, subnetting</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Firewall, IDS, endpoint security</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Cabling and device configuration</div>
+                    </div>
+                </div>
+
+                <div class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="cloud" class="h-5 w-5 text-glow"></i>
+                        <h4 class="text-xl font-semibold text-white">Cloud & DevOps</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Amazon Web Services</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Microsoft Azure</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Monitoring and maintenance</div>
+                    </div>
+                </div>
+
+                <div class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="notebook-pen" class="h-5 w-5 text-cyan-200"></i>
+                        <h4 class="text-xl font-semibold text-white">Productivity & Data</h4>
+                    </div>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Microsoft Office Suite</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">DHIS2, Kobo Toolbox</div>
+                        <div class="rounded-2xl bg-white/5 px-4 py-3">Google Sheets, Google Analytics</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-heading" class="reveal py-20 lg:py-24">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Experience</p>
+                    <h2 id="experience-heading" class="mt-3 text-3xl font-bold text-white sm:text-4xl">Professional journey</h2>
+                    <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-400">
+                        A growing track record across software delivery, IT support, network operations, technical
+                        maintenance,
+                        and election systems support — with emphasis on reliability, client needs, and practical
+                        results.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-6">
+                <article
+                    class="rounded-md border border-teal/20 bg-teal/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-teal/10">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-teal/20 bg-teal/10 text-teal">
+                                <i data-lucide="code-2" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Software Developer (React Systems)</h3>
+                                <p class="mt-1 text-sm text-slate-400">Lilongwe • May 2026 – Present</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs font-medium text-teal-100">Current role</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Design, develop, and maintain software applications across both frontend and backend systems,
+                        translating client requirements into practical solutions that meet real business needs.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i>
+                            <span>Design, develop, and maintain software applications across frontend and backend environments.</span>
+                        </li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i>
+                            <span>Work closely with clients to understand requirements, workflows, and expected outcomes.</span>
+                        </li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i>
+                            <span>Deliver solutions focused on usability, maintainability, reliability, and customer needs.</span>
+                        </li>
+                    </ul>
+                </article>
+                <article
+                    class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-white/10 bg-teal/10 text-teal">
+                                <i data-lucide="monitor-smartphone" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Software Developer (Electro)</h3>
+                                <p class="mt-1 text-sm text-slate-400">Blantyre • February 2025 – November 2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs font-medium text-teal-100">Full-stack
+                            delivery</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Delivered a business-facing web application that combined a responsive interface, structured
+                        backend logic,
+                        and payment integration. The focus was on secure transactions, smooth user flows, and a clean
+                        experience
+                        that matched client expectations.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i><span>Built and
+                                maintained a web application using HTML, Tailwind CSS, JavaScript, PHP, and SQL.</span>
+                        </li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-teal"></i><span>Integrated the PayChangu payment API to support
+                                secure and efficient in-app transactions.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-teal"></i><span>Translated client requirements into a practical
+                                solution delivered within the expected timeline.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-teal"></i><span>Focused
+                                on code maintainability, usability, and a stable production-ready experience.</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-white/10 bg-sand/10 text-sand">
+                                <i data-lucide="network" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">System Infrastructure Officer (MUBAS)</h3>
+                                <p class="mt-1 text-sm text-slate-400">Blantyre • April 2025 – June 2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-sand/20 bg-sand/10 px-3 py-1 text-xs font-medium text-sand">Infrastructure</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Supported day-to-day IT operations across network and hardware environments. The role involved
+                        practical
+                        maintenance, device replacement, and infrastructure improvements to keep systems dependable and
+                        secure.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-sand"></i><span>Assisted
+                                in overseeing and maintaining network systems, servers, and related hardware to support
+                                reliable operations.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-sand"></i><span>Installed
+                                firewalls, network cabling, routers, and switches to improve secure connectivity across
+                                the environment.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-sand"></i><span>Maintained, repaired, and replaced faulty Wi‑Fi
+                                access points, laptops, desktops, and CCTV cameras.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-sand"></i><span>Worked on
+                                practical troubleshooting and routine support to reduce downtime and keep services
+                                available.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-white/10 bg-mist/10 text-mist">
+                                <i data-lucide="wrench" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">ICT Technician (TEE Components and
+                                    Communications)</h3>
+                                <p class="mt-1 text-sm text-slate-400">Lilongwe • May 2024 – August 2024</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-mist/20 bg-mist/10 px-3 py-1 text-xs font-medium text-mist">Support</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Provided technical maintenance and support services for financial institutions, ensuring that
+                        critical machines
+                        and office equipment remained functional and ready for operational use.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-mist"></i><span>Delivered
+                                technical support and preventive maintenance for money counting machines, computers, and
+                                printers.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-mist"></i><span>Helped
+                                maintain reliable service for First Capital Bank, NBS Bank, and the Reserve Bank of
+                                Malawi.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-mist"></i><span>Responded
+                                to faults quickly to restore equipment performance and minimize interruptions.</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-white/10 bg-amber-400/10 text-peach">
+                                <i data-lucide="code-2" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Software Developer (House Nest)</h3>
+                                <p class="mt-1 text-sm text-slate-400">Blantyre • April 2024 – June 2025</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-peach/20 bg-peach/10 px-3 py-1 text-xs font-medium text-peach">API
+                            integration</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Worked on a property-focused web platform where the main goal was to combine presentation,
+                        communication,
+                        and transaction handling into a responsive solution that remained easy to use and maintain.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-peach"></i><span>Designed
+                                and developed a web application using HTML, CSS, JavaScript, Bootstrap, PHP, and
+                                SQL.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-peach"></i><span>Integrated SMS and payment APIs to support
+                                communication and secure transaction processing.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="mt-1 h-4 w-4 text-peach"></i><span>Helped
+                                shape a user-friendly experience that could support everyday business operations.</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-white/10 bg-purple-500/10 text-purple-200">
+                                <i data-lucide="car-front" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Software Developer (No Deposit Car Rental)
+                                </h3>
+                                <p class="mt-1 text-sm text-slate-400">Dubai (remote) • May 2023 – April 2024</p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-purple-400/20 bg-purple-400/10 px-3 py-1 text-xs font-medium text-purple-200">Performance</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Contributed to a remote product environment where the focus was on speed, usability, and
+                        discoverability.
+                        The work involved making the web application more responsive, efficient, and better positioned
+                        for search.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-purple-200"></i><span>Developed and maintained a responsive,
+                                high-performance web application using effective frontend and backend strategies.</span>
+                        </li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-purple-200"></i><span>Improved usability and structure to
+                                support a smoother customer experience across devices.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-purple-200"></i><span>Applied SEO best practices to improve
+                                visibility in search results and strengthen organic traffic.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-purple-200"></i><span>Worked with performance-minded
+                                implementation to help keep the platform fast and reliable.</span></li>
+                    </ul>
+                </article>
+
+                <article
+                    class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-white/10 bg-pink-500/10 text-pink-200">
+                                <i data-lucide="badge-check" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Election Management Device (EMD) Operator (MEC)</h3>
+                                <p class="mt-1 text-sm text-slate-400">Various Locations • October 2024 – September 2025
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex w-fit rounded-full border border-pink-400/20 bg-pink-400/10 px-3 py-1 text-xs font-medium text-pink-200">Operations</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">
+                        Supported the voter registration and verification process during election operations. The role
+                        required accuracy,
+                        confidentiality, and careful handling of identity data in a high-responsibility environment.
+                    </p>
+                    <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-pink-200"></i><span>Registered, transferred, and verified
+                                voters using the Election Management Device.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-pink-200"></i><span>Captured and updated voter demographic
+                                information accurately in line with MEC procedures.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-pink-200"></i><span>Supported fingerprint-based identity
+                                confirmation and ensured records matched the correct registration centre.</span></li>
+                        <li class="flex gap-3"><i data-lucide="check"
+                                class="mt-1 h-4 w-4 text-pink-200"></i><span>Maintained professionalism while handling
+                                sensitive public-facing administrative work.</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal py-20 lg:py-24">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Highlights</p>
+                    <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Featured work</h2>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                <div
+                    class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex items-center justify-between">
+                        <i data-lucide="credit-card" class="h-8 w-8 text-teal"></i>
+                        <span
+                            class="rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs text-teal-100">Payment
+                            API</span>
+                    </div>
+                    <h4 class="mt-6 text-2xl font-semibold text-white">Electro Web Application</h4>
+                    <p class="mt-3 text-sm leading-7 text-slate-400">Secure transaction-focused business application
+                        with modern UI and backend logic.</p>
+                    <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    <p class="mt-4 text-sm text-slate-300">Tailwind CSS • PHP • SQL • PayChangu</p>
+                </div>
+
+                <div
+                    class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex items-center justify-between">
+                        <i data-lucide="home" class="h-8 w-8 text-sand"></i>
+                        <span
+                            class="rounded-full border border-sand/20 bg-sand/10 px-3 py-1 text-xs text-sand/100">Property
+                            tech</span>
+                    </div>
+                    <h4 class="mt-6 text-2xl font-semibold text-white">House Nest Platform</h4>
+                    <p class="mt-3 text-sm leading-7 text-slate-400">Property-focused web solution with communication
+                        and payment integrations.</p>
+                    <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    <p class="mt-4 text-sm text-slate-300">HTML • Bootstrap • JavaScript • PHP • SQL</p>
+                </div>
+
+                <div
+                    class="rounded-md border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/8">
+                    <div class="flex items-center justify-between">
+                        <i data-lucide="search-check" class="h-8 w-8 text-peach"></i>
+                        <span
+                            class="rounded-full border border-peach/20 bg-peach/10 px-3 py-1 text-xs text-peach/100">SEO
+                            + speed</span>
+                    </div>
+                    <h4 class="mt-6 text-2xl font-semibold text-white">No Deposit Car Rental</h4>
+                    <p class="mt-3 text-sm leading-7 text-slate-400">Responsive rental platform designed to improve
+                        visibility and user experience.</p>
+                    <div class="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    <p class="mt-4 text-sm text-slate-300">UX • Performance • SEO • Responsive design</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="reveal py-20 lg:py-24">
+            <div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Education</p>
+                    <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Academic background</h2>
+                </div>
+                <div class="rounded-md border border-white/10 bg-white/5 p-6 md:p-8">
+                    <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">Bachelor of Science in Information and
+                                Community Technology</h4>
+                            <p class="mt-2 text-slate-400">Mzuzu University, Mzuzu</p>
+                        </div>
+                        <span
+                            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">Oct
+                            2019 – Jan 2024</span>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-300">A strong foundation in computing, systems,
+                        networking, and practical information technology applications.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="references" class="reveal py-20 lg:py-24" aria-labelledby="references-heading">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">References</p>
+                    <h2 id="references-heading" class="mt-3 text-3xl font-bold text-white sm:text-4xl">Professional references</h2>
+                    <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-400">
+                        Professional and academic contacts listed in my current curriculum vitae.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+
+                <article class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <h3 class="text-xl font-semibold text-white">Kondwani Clement</h3>
+                    <p class="mt-2 text-sand">React Systems</p>
+                    <a class="mt-5 flex items-center gap-2 text-sm text-slate-300 hover:text-white" href="tel:+265881102326">
+                        <i data-lucide="phone" class="h-4 w-4"></i> +265 881 102 326
+                    </a>
+                    <a class="mt-3 flex items-center gap-2 break-all text-sm text-slate-300 hover:text-white"
+                        href="mailto:khoboscoclement@gmail.com">
+                        <i data-lucide="mail" class="h-4 w-4"></i> khoboscoclement@gmail.com
+                    </a>
+                </article>
+
+                <article class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <h3 class="text-xl font-semibold text-white">Mr. E. Mhango</h3>
+                    <p class="mt-2 text-sand">BASEflow</p>
+                    <a class="mt-5 flex items-center gap-2 text-sm text-slate-300 hover:text-white" href="tel:+265991121953">
+                        <i data-lucide="phone" class="h-4 w-4"></i> +265 991 121 953
+                    </a>
+                    <a class="mt-3 flex items-center gap-2 break-all text-sm text-slate-300 hover:text-white" href="mailto:emmanuellmhango@gmail.com">
+                        <i data-lucide="mail" class="h-4 w-4"></i> emmanuellmhango@gmail.com
+                    </a>
+                </article>
+
+                <article class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <h3 class="text-xl font-semibold text-white">Mr. E. Namacha</h3>
+                    <p class="mt-2 text-sand">Mzuzu University</p>
+                    <a class="mt-5 flex items-center gap-2 text-sm text-slate-300 hover:text-white" href="tel:+265999857286">
+                        <i data-lucide="phone" class="h-4 w-4"></i> +265 999 857 286
+                    </a>
+                    <a class="mt-3 flex items-center gap-2 break-all text-sm text-slate-300 hover:text-white" href="mailto:Namacha.e@mzuni.ac.mw">
+                        <i data-lucide="mail" class="h-4 w-4"></i> Namacha.e@mzuni.ac.mw
+                    </a>
+                </article>
+
+                <article class="rounded-md border border-white/10 bg-white/5 p-6">
+                    <h3 class="text-xl font-semibold text-white">Mr. H. Namakhwa</h3>
+                    <p class="mt-2 text-sand">TEE Components and Communications</p>
+                    <a class="mt-5 flex items-center gap-2 text-sm text-slate-300 hover:text-white" href="tel:+265882753205">
+                        <i data-lucide="phone" class="h-4 w-4"></i> +265 882 753 205
+                    </a>
+                    <a class="mt-3 flex items-center gap-2 break-all text-sm text-slate-300 hover:text-white" href="mailto:namakhwahilary@yahoo.com">
+                        <i data-lucide="mail" class="h-4 w-4"></i> namakhwahilary@yahoo.com
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal py-20 lg:py-24">
+            <div
+                class="overflow-hidden rounded-md border border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(17,100,102,.35),transparent_35%),linear-gradient(135deg,rgba(44,53,49,.95),rgba(6,17,18,.98))] p-8 md:p-12 shadow-2xl">
+                <div class="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-center">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sand/80">Contact</p>
+                        <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Let’s build something useful</h2>
+                        <p class="mt-5 max-w-2xl leading-8 text-slate-300">Reach out for software development, IT
+                            support, infrastructure maintenance, or web project collaboration.</p>
+                        <div class="mt-8 flex flex-wrap gap-4">
+                            <a href="mailto:mgawiralph@gmail.com"
+                                class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                                <i data-lucide="mail" class="h-4 w-4"></i>
+                                Email Me
+                            </a>
+                            <a href="tel:+265997232061"
+                                class="inline-flex items-center gap-2 rounded-2xl border border-teal/25 bg-teal/10 px-6 py-3 font-semibold text-teal-100 transition hover:-translate-y-0.5 hover:bg-teal/20">
+                                <i data-lucide="phone" class="h-4 w-4"></i>
+                                Call Me
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div class="rounded-md border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
+                            <p class="text-sm text-slate-400">Email</p>
+                            <p class="mt-2 text-lg font-semibold text-white">mgawiralph@gmail.com</p>
+                        </div>
+                        <div class="rounded-md border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
+                            <p class="text-sm text-slate-400">Phone</p>
+                            <p class="mt-2 text-lg font-semibold text-white">+265 997 232 061</p>
+                            <p class="text-sm font-medium text-slate-300">+265 880 474 533</p>
+                        </div>
+                        <div class="rounded-md border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
+                            <p class="text-sm text-slate-400">LinkedIn</p>
+                            <a class="mt-2 block break-all text-lg font-semibold text-white hover:text-sand"
+                                href="https://www.linkedin.com/in/ralph-mgawi-5ba1612aa" target="_blank" rel="me noopener noreferrer">
+                                linkedin.com/in/ralph-mgawi-5ba1612aa
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8 text-center text-sm text-slate-500">
+        © 2026 Raphael Mgawi. Built with HTML, Tailwind CSS, and JavaScript.
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', String(!isHidden));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const revealItems = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        }, { threshold: 0.15 });
+        revealItems.forEach(item => observer.observe(item));
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
